@@ -9,7 +9,7 @@
   background-size: cover;
 }
 
-main {
+.main-homepage {
   height: 85%;
   width: 55%;
   display: flex;
