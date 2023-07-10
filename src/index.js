@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -11,8 +11,8 @@ export const DatabaseContext = createContext({
     {
       "name": "Moon",
       "images": {
-        "png": "./images/destination/image-moon.png",
-        "webp": "./images/destination/image-moon.webp"
+        "png": "../images/destination/image-moon.png",
+        "webp": "../images/destination/image-moon.webp"
       },
       "description": "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
       "distance": "384,400 km",
@@ -21,8 +21,8 @@ export const DatabaseContext = createContext({
     {
       "name": "Mars",
       "images": {
-        "png": "./images/destination/image-mars.png",
-        "webp": "./images/destination/image-mars.webp"
+        "png": "../images/destination/image-mars.png",
+        "webp": "../images/destination/image-mars.webp"
       },
       "description": "Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!",
       "distance": "225 mil. km",
@@ -31,8 +31,8 @@ export const DatabaseContext = createContext({
     {
       "name": "Europa",
       "images": {
-        "png": "./images/destination/image-europa.png",
-        "webp": "./images/destination/image-europa.webp"
+        "png": "../images/destination/image-europa.png",
+        "webp": "../images/destination/image-europa.webp"
       },
       "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
       "distance": "628 mil. km",
@@ -41,8 +41,8 @@ export const DatabaseContext = createContext({
     {
       "name": "Titan",
       "images": {
-        "png": "./images/destination/image-titan.png",
-        "webp": "./images/destination/image-titan.webp"
+        "png": "../images/destination/image-titan.png",
+        "webp": "../images/destination/image-titan.webp"
       },
       "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
       "distance": "1.6 bil. km",
@@ -115,15 +115,26 @@ export const DatabaseContext = createContext({
   ]
 })
 
+// export const SelectedPlanetContext = createContext(null)
+
+// const [selectedPlanet, setSelectedPlanet] = useState({name: 'moon', index: 0})
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/destination' element={<DestinationPage />} />
-        <Route path='/crew' element={<CrewPage />} />
-      </Routes>
+      {/* <SelectedPlanetContext.Provider
+        value={{
+          selectedPlanet,
+          setSelectedPlanet
+        }}
+      > */}
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/destination' element={<DestinationPage />} />
+          <Route path='/crew' element={<CrewPage />} />
+        </Routes>
+      {/* </SelectedPlanetContext.Provider> */}
     </React.StrictMode>
   </BrowserRouter>
 );

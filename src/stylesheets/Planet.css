@@ -1,0 +1,13 @@
+.destination-box {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination-image {
+    height: 75%;
+    margin-bottom: 7%;
+}
