@@ -17,3 +17,109 @@
     align-items: stretch;
     justify-content: stretch;
 }
+
+.left-side.tech {
+    width: 47.5%;
+    margin-left: 12.5%;
+}
+
+.tech-text-container {
+    height: 85%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tech-picker-box {
+    height: 65%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 5% 0;
+    gap: 5%;
+    margin-bottom: 5%;
+}
+
+.tech-picker-button {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.tech-picker-button.on {
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.tech-picker-button:hover {
+    cursor: pointer;
+}
+
+.tech-text-box {
+    height: 65%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 4%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+
+.tech-text-intro {
+    color: #D0D6F9;
+    text-decoration: none;
+    letter-spacing: 2.7px;
+    font-size: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.tech-text-name {
+    color: white;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    margin-top: 0%;
+    margin-bottom: 1%;
+}
+
+.tech-text-description {
+    margin-right: 10%;
+}
+
+.right-side.tech {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.tech-image {
+    height: 80%;
+    width: 90%;
+}
