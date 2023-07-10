@@ -61,7 +61,7 @@ li {
     border-bottom: 3px solid white;
 }
 
-hr {
+.homepage-hr {
     width: 32%;
     position: absolute;
     top: 7.5%;

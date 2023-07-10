@@ -15,7 +15,7 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-      <hr></hr>
+      <hr className='homepage-hr'></hr>
     </>
   )
 }

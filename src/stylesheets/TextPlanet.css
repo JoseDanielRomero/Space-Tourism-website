@@ -1,0 +1,54 @@
+.destinationpage-h1 {
+    color: white;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 5.5rem;
+    margin-top: 5.5%;
+    margin-bottom: 2%;
+}
+
+.destinationpage-hr {
+    width: 100%;
+    border: .1px solid #979797;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding: 0;
+}
+
+.data-box {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
+.data-mini-box {
+    height: 75%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data-title {
+    color: #D0D6F9;
+    text-decoration: none;
+    letter-spacing: 2.7px;
+    font-size: .9rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.data-result {
+    color: white;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}

@@ -18,8 +18,6 @@ function DestinationPage() {
     setSelectedPlanet({name: destinationFormated, index: desIndex})
   }
 
-  console.log(selectedPlanet)
-
   return (
     <div className='DestinationPage'>
       <Navbar />
@@ -51,8 +49,11 @@ function DestinationPage() {
                 }}>TITAN</li>
               </ul>
             </div>
+            <TextPlanet
+              destinationName={selectedPlanet.name}
+              destinationIndex={selectedPlanet.index}
+            />
           </section>
-          <TextPlanet />
         </article>
       </main>
     </div>
