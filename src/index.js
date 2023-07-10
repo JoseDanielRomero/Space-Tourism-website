@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './routes/HomePage';
 import DestinationPage from './routes/DestinationPage';
 import CrewPage from './routes/CrewPage'
+import TechPage from './routes/TechPage';
 
 export const DatabaseContext = createContext({
   "destinations": [
@@ -123,6 +124,7 @@ root.render(
           <Route path='/' element={<HomePage />} />
           <Route path='/destination' element={<DestinationPage />} />
           <Route path='/crew' element={<CrewPage />} />
+          <Route path='/technology' element={<TechPage />} />
         </Routes>
     </React.StrictMode>
   </BrowserRouter>
