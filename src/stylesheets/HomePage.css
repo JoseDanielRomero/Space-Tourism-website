@@ -3,8 +3,45 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   background-image: url('../images/background-home-desktop.jpg');
   background-size: cover;
+}
+
+main {
+  height: 85%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 12%;
+}
+
+.homepage-h3 {
+  color: #D0D6F9;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 4.72px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin: 0;
+}
+
+.homepage-h1 {
+  color: white;
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 9.1rem;
+  margin: 4% 0%;
+}
+
+p {
+  color: #D0D6F9;
+  font-size: 1.1rem;
+  font-family: 'Barlow', sans-serif;
+  margin: 0;
+  line-height: 1.5rem;
 }

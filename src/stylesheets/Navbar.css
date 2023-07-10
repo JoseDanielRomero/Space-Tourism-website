@@ -5,7 +5,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 4%;
+    padding-left: 5%;
 }
 
 .logo {
@@ -25,7 +25,6 @@ nav {
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.041);
     backdrop-filter: blur(55px);
-
 }
 
 ul {
@@ -40,7 +39,34 @@ ul {
     margin: 0;
 }
 
+li {
+    height: 100%;
+}
+
 .nav-item {
+    height: 100%;
     color: white;
     text-decoration: none;
+    letter-spacing: 2.7px;
+    font-size: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item:hover {
+    padding-top: 3px;
+    border-bottom: 3px solid white;
+}
+
+hr {
+    width: 32%;
+    position: absolute;
+    top: 7.5%;
+    left: 13%;
+    border: .1px solid #979797;
+    margin: 0;
+    padding: 0;
 }
