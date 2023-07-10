@@ -7,7 +7,7 @@ function Navbar() {
       <nav>
         <div className='logo'></div>
         <div className='navbar-container'>
-          <ul>
+          <ul className='navbar-list'>
             <li><NavLink to='/' className='nav-item'>00 HOME</NavLink></li>
             <li><NavLink to='/destination' className='nav-item'>01 DESTINATION</NavLink></li>
             <li><NavLink to='/crew' className='nav-item'>02 CREW</NavLink></li>

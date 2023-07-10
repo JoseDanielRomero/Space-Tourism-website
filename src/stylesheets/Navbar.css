@@ -27,7 +27,7 @@ nav {
     backdrop-filter: blur(55px);
 }
 
-ul {
+.navbar-list {
     height: 100%;
     width: 70%;
     display: flex;

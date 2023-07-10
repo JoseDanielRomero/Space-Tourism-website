@@ -26,12 +26,55 @@
 .right-side {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .text-container {
-    height: 65%;
+    height: 70%;
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.destination-picker-box {
+    height: 10%;
+}
+
+.destination-picker-list {
+    height: 100%;
     width: 100%;
-    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10%;
+}
+
+.destination-picker-item {
+    height: 100%;
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+    letter-spacing: 2.7px;
+    font-size: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.destination-picker-item:hover {
+    padding-top: 3px;
+    border-bottom: 3px solid rgb(211, 211, 211);
+    cursor: pointer;
 }

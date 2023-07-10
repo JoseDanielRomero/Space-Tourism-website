@@ -115,26 +115,15 @@ export const DatabaseContext = createContext({
   ]
 })
 
-// export const SelectedPlanetContext = createContext(null)
-
-// const [selectedPlanet, setSelectedPlanet] = useState({name: 'moon', index: 0})
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      {/* <SelectedPlanetContext.Provider
-        value={{
-          selectedPlanet,
-          setSelectedPlanet
-        }}
-      > */}
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/destination' element={<DestinationPage />} />
           <Route path='/crew' element={<CrewPage />} />
         </Routes>
-      {/* </SelectedPlanetContext.Provider> */}
     </React.StrictMode>
   </BrowserRouter>
 );
