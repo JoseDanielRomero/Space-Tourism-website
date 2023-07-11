@@ -47,10 +47,8 @@ function TechPage() {
       }
     } else {
       if (display == false) {
-        console.log('hola')
         return 'title-destination-box'
       } else {
-        console.log('hola 2')
         return 'title-destination-box off'
       }
     }
