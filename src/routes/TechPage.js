@@ -40,6 +40,7 @@ function TechPage() {
           <Titles 
             titleNumber='03'
             titleText='SPACE LAUNCH 101'
+            clase='title-destination-box'
           />
           <section className='tech-text-container'>
             <div className='tech-picker-box'>

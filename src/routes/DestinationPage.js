@@ -26,6 +26,7 @@ function DestinationPage() {
           <Titles 
             titleNumber='01'
             titleText='PICK YOUR DESTINATION'
+            clase='title-destination-box'
           />
           <Planet 
             destinationName={selectedPlanet.name}

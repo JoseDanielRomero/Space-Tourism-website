@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useRef } from 'react';
 import { DatabaseContext } from '..';
 import Navbar from '../components/Navbar';
 import Titles from '../components/Titles';
@@ -8,6 +8,11 @@ function CrewPage() {
 
   const context = useContext(DatabaseContext);
   const [selectedCrew, setSelectedCrew] = useState({name: 'Douglas Hurley', index: 0})
+
+  const windowWidth = useRef(window.innerWidth)
+  const windowWidthFix = windowWidth.current
+
+  console.log(windowWidthFix)
 
   const modSelectedName1 = (selectedCrew.name).toLocaleLowerCase()
   const modSelectedName2 = (modSelectedName1).split(' ')
@@ -27,6 +32,24 @@ function CrewPage() {
     }
   }
 
+  const handleClassTitleByDevice = (display) => {
+    if (windowWidthFix < 680) {
+      if (display == false) {
+        return 'title-destination-box off'
+      } else {
+        return 'title-destination-box'
+      }
+    } else {
+      if (display == false) {
+        console.log('hola')
+        return 'title-destination-box'
+      } else {
+        console.log('hola 2')
+        return 'title-destination-box off'
+      }
+    }
+  }
+
   return (
     <div className='CrewPage'>
       <Navbar />
@@ -35,6 +58,7 @@ function CrewPage() {
           <Titles 
             titleNumber='02'
             titleText='MEET YOUR CREW'
+            clase={handleClassTitleByDevice(false)}
           />
           <section className='crew-text-container'>
             <div className='crew-text-box'>
@@ -59,7 +83,13 @@ function CrewPage() {
           </section>
         </article>
         <article className='right-side crew'>
+          <Titles 
+              titleNumber='02'
+              titleText='MEET YOUR CREW'
+              clase={handleClassTitleByDevice(true)}
+            />
           <img src={urlFormated} className='crew-image' alt={selectedCrew.name} />
+          <hr className='crewpage-hr'></hr>
         </article>
       </main>
     </div>

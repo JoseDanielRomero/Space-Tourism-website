@@ -112,7 +112,7 @@ li {
         top: 0;
         right: 0; 
         z-index: 900000;
-        transition: width .35s ease-in-out;
+        transition: width .20s ease-in-out;
     }
 
     .navbar-list {
@@ -129,13 +129,13 @@ li {
     }
 
     .navbar-container.off {
-        transition: width .35s ease-in-out;
+        transition: width .20s ease-in-out;
         width: 0%;
     }
 
     .nav-item {
         height: 20%;
-        transition: all .35s ease-in-out;
+        transition: all .20s ease-in-out;
     }
 
     .nav-item:hover {
@@ -144,7 +144,7 @@ li {
     }
 
     .nav-item.off {
-        transition: all .35s ease-in-out;
+        transition: all .20s ease-in-out;
         display: none;
     }
 

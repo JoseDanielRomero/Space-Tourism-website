@@ -8,6 +8,10 @@
     gap: 4%;
 }
 
+.title-destination-box.off {
+    display: none;
+}
+
 .title-destination-number, .title-destination-text {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.7rem;
@@ -51,5 +55,4 @@
         color: white;
         font-weight: 400;
     }
-
 }
