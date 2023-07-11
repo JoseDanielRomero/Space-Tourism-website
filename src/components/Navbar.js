@@ -33,13 +33,13 @@ function Navbar () {
   }
   
   const handleClassShowNavbar = navbarToogle == false ? 'navbar-container off' : 'navbar-container'
-  
+  const handleClassShowIcon = navbarToogle == false ? hamburgerIcon : closeIcon
   const handleClassNavbarItems = navbarToogle == false ? 'nav-item off' : 'nav-item'
 
   return (
     <>
       <nav>
-        <img src={hamburgerIcon} className={handleShowHamburgerIcon()} onClick={handleClickShowNavbar} />
+        <img src={handleClassShowIcon} className={handleShowHamburgerIcon()} onClick={handleClickShowNavbar} />
         <div className='logo'></div>
         <div className={handleClassShowNavbar}>
           <ul className='navbar-list'>

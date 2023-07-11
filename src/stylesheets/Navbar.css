@@ -100,6 +100,10 @@ li {
     .navbar-container {
         height: 100vh;
         width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 35%;
         position: fixed;
         top: 0;
         right: 0; 
@@ -108,15 +112,16 @@ li {
     }
 
     .navbar-list {
-        height: 100%;
-        width: 70%;
+        height: 35%;
+        width: 75%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        align-items: flex-start;
+        justify-content: center;
         list-style: none;
         padding: 0;
         margin: 0;
+        gap: 5%;
     }
 
     .navbar-container.off {
@@ -125,7 +130,13 @@ li {
     }
 
     .nav-item {
+        height: 20%;
         transition: all .35s ease-in-out;
+    }
+
+    .nav-item:hover {
+        padding-top: 0;
+        border-bottom: none;
     }
 
     .nav-item.off {
