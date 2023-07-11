@@ -6,7 +6,9 @@ function HomePage() {
   const [navbarToogle, setNavbarToogle] = useState(false);
 
   const handleClickOutNavbar = () => {
-    setNavbarToogle(false)
+    if (navbarToogle == true) {
+      setNavbarToogle(false)
+    }
   }
 
   return (

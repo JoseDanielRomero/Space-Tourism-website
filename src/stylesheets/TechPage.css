@@ -126,9 +126,9 @@
 @media screen and (max-width: 480px) {
 
     .TechPage {
-        height: auto;
+        height: 100vh;
         background-image: url('../images/background-technology-mobile.jpg');
-        padding-bottom: 20%;
+        padding-bottom: 10%;
     }
 
     .main-tech {
@@ -143,7 +143,7 @@
     
     .left-side.tech {
         order: 5;
-        height: 0%;
+        height: 60%;
         width: 100%;
         margin-left: 0;
         display: flex;
@@ -155,16 +155,16 @@
 
     .right-side.tech {
         order: 2;
-        height: 50%;
+        height: 40%;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .tech-text-container {
-        height: 85%;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -173,12 +173,15 @@
     }
 
     .tech-text-box {
-        height: 45%;
+        height: 80%;
         width: 100%;
+        margin: 0;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .tech-picker-box {
-        height: 45%;
+        height: 20%;
         width: 70%;
         display: flex;
         flex-direction: row;
@@ -201,12 +204,18 @@
         padding-top: 1%;
     }
 
+    .tech-text-name {
+        font-size: 1.8rem;
+        margin-top: 0%;
+        margin-bottom: 1%;
+    }
 
-
-
-
-
-
+    .tech-text-description {
+        margin-right: 0;
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+    
     .tech-image {
         height: auto;
         width: 100%;

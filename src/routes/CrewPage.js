@@ -50,7 +50,9 @@ function CrewPage() {
   }
 
   const handleClickOutNavbar = () => {
-    setNavbarToogle(false)
+    if (navbarToogle == true) {
+      setNavbarToogle(false)
+    }
   }
 
   return (

@@ -20,7 +20,9 @@ function DestinationPage() {
   }
 
   const handleClickOutNavbar = () => {
-    setNavbarToogle(false)
+    if (navbarToogle == true) {
+      setNavbarToogle(false)
+    }
   }
 
   return (
