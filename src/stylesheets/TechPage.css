@@ -122,3 +122,95 @@
 .tech-image {
     height: 80%;
 }
+
+@media screen and (max-width: 480px) {
+
+    .TechPage {
+        height: auto;
+        background-image: url('../images/background-technology-mobile.jpg');
+        padding-bottom: 20%;
+    }
+
+    .main-tech {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    
+    .left-side.tech {
+        order: 5;
+        height: 0%;
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 10%;
+    }
+
+    .right-side.tech {
+        order: 2;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tech-text-container {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tech-text-box {
+        height: 45%;
+        width: 100%;
+    }
+
+    .tech-picker-box {
+        height: 45%;
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5% 0;
+        gap: 5%;
+        margin-bottom: 5%;
+    }
+
+    .tech-picker-button {
+        height: 45px;
+        width: 45px;
+        border-radius: 45px;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1%;
+    }
+
+
+
+
+
+
+
+    .tech-image {
+        height: auto;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+ 
+}

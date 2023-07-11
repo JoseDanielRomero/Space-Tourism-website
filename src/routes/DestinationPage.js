@@ -7,6 +7,7 @@ import Titles from '../components/Titles';
 import '../stylesheets/DestinationPage.css'
 
 function DestinationPage() {
+  const [navbarToogle, setNavbarToogle] = useState(false);
 
   const context = useContext(DatabaseContext)
 
@@ -18,10 +19,17 @@ function DestinationPage() {
     setSelectedPlanet({name: destinationFormated, index: desIndex})
   }
 
+  const handleClickOutNavbar = () => {
+    setNavbarToogle(false)
+  }
+
   return (
     <div className='DestinationPage'>
-      <Navbar />
-      <main className='main-destination'>
+      <Navbar 
+        navbarToogle={navbarToogle}
+        setNavbarToogle={setNavbarToogle}
+      />
+      <main className='main-destination' onClick={handleClickOutNavbar} >
         <article className='left-side'>
           <Titles 
             titleNumber='01'

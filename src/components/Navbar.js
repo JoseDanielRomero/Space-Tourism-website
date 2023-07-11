@@ -3,13 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { useRef } from 'react';
 import hamburgerIcon from '../images/icon-hamburger.svg'
 import closeIcon from '../images/icon-close.svg'
-import { useState } from 'react';
 
-function Navbar () {
+function Navbar ({ navbarToogle, setNavbarToogle }) {
   const windowWidth = useRef(window.innerWidth)
   const windowWidthFix = windowWidth.current
-
-  const [navbarToogle, setNavbarToogle] = useState(false);
 
   const handleClickShowNavbar = () => {
     if (windowWidthFix < 680) {

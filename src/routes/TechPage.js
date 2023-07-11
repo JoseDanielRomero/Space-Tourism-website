@@ -1,13 +1,17 @@
 import Navbar from '../components/Navbar'
 import '../stylesheets/TechPage.css'
 import Titles from '../components/Titles'
-import { useContext, useState } from 'react'
+import { useContext, useState, useRef } from 'react'
 import { DatabaseContext } from '..'
 
 function TechPage() {
+  const [navbarToogle, setNavbarToogle] = useState(false);
 
   const context = useContext(DatabaseContext);
   const [selectedTech, setSelectedTech] = useState({name: 'Launch vehicle', index: 0})
+
+  const windowWidth = useRef(window.innerWidth)
+  const windowWidthFix = windowWidth.current
 
   const modSelectedName1 = (selectedTech.name).toLocaleLowerCase()
   const modSelectedName2 = (modSelectedName1).split(' ')
@@ -16,8 +20,10 @@ function TechPage() {
     const modSelectedName3 = modSelectedName2.splice(1, 0, '-')
   }
 
+  const orientation = windowWidthFix < 680 ? 'landscape' : 'portrait'
+
   const modSelectedName4 = modSelectedName2.join('')
-  const urlFormated = require(`../images/technology/image-${modSelectedName4}-portrait.jpg`)
+  const urlFormated = require(`../images/technology/image-${modSelectedName4}-${orientation}.jpg`)
 
   const handleClickPickTech = (techIndex) => {
     const techName = context.technology[techIndex].name
@@ -32,15 +38,40 @@ function TechPage() {
     }
   }
 
+  const handleClassTitleByDevice = (display) => {
+    if (windowWidthFix < 680) {
+      if (display == false) {
+        return 'title-destination-box off'
+      } else {
+        return 'title-destination-box'
+      }
+    } else {
+      if (display == false) {
+        console.log('hola')
+        return 'title-destination-box'
+      } else {
+        console.log('hola 2')
+        return 'title-destination-box off'
+      }
+    }
+  }
+
+  const handleClickOutNavbar = () => {
+    setNavbarToogle(false)
+  }
+
   return (
     <div className='TechPage'>
-      <Navbar />
-      <main className='main-tech'>
+      <Navbar 
+        navbarToogle={navbarToogle}
+        setNavbarToogle={setNavbarToogle}
+      />
+      <main className='main-tech' onClick={handleClickOutNavbar}>
         <article className='left-side tech'>
           <Titles 
             titleNumber='03'
             titleText='SPACE LAUNCH 101'
-            clase='title-destination-box'
+            clase={handleClassTitleByDevice(false)}
           />
           <section className='tech-text-container'>
             <div className='tech-picker-box'>
@@ -62,6 +93,11 @@ function TechPage() {
           </section>
         </article>
         <article className='right-side tech'>
+          <Titles 
+            titleNumber='03'
+            titleText='SPACE LAUNCH 101'
+            clase={handleClassTitleByDevice(true)}
+          />
           <img src={urlFormated} className='tech-image' />
         </article>
       </main>

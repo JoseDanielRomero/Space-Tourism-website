@@ -5,14 +5,13 @@ import Titles from '../components/Titles';
 import '../stylesheets/CrewPage.css'
 
 function CrewPage() {
+  const [navbarToogle, setNavbarToogle] = useState(false);
 
   const context = useContext(DatabaseContext);
   const [selectedCrew, setSelectedCrew] = useState({name: 'Douglas Hurley', index: 0})
 
   const windowWidth = useRef(window.innerWidth)
   const windowWidthFix = windowWidth.current
-
-  console.log(windowWidthFix)
 
   const modSelectedName1 = (selectedCrew.name).toLocaleLowerCase()
   const modSelectedName2 = (modSelectedName1).split(' ')
@@ -50,10 +49,17 @@ function CrewPage() {
     }
   }
 
+  const handleClickOutNavbar = () => {
+    setNavbarToogle(false)
+  }
+
   return (
     <div className='CrewPage'>
-      <Navbar />
-      <main className='main-crew'>
+      <Navbar 
+        navbarToogle={navbarToogle}
+        setNavbarToogle={setNavbarToogle}
+      />
+      <main className='main-crew' onClick={handleClickOutNavbar}>
         <article className='left-side crew'>
           <Titles 
             titleNumber='02'
@@ -84,10 +90,10 @@ function CrewPage() {
         </article>
         <article className='right-side crew'>
           <Titles 
-              titleNumber='02'
-              titleText='MEET YOUR CREW'
-              clase={handleClassTitleByDevice(true)}
-            />
+            titleNumber='02'
+            titleText='MEET YOUR CREW'
+            clase={handleClassTitleByDevice(true)}
+          />
           <img src={urlFormated} className='crew-image' alt={selectedCrew.name} />
           <hr className='crewpage-hr'></hr>
         </article>
