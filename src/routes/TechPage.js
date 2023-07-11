@@ -12,8 +12,6 @@ function TechPage() {
   const modSelectedName1 = (selectedTech.name).toLocaleLowerCase()
   const modSelectedName2 = (modSelectedName1).split(' ')
 
-  console.log(modSelectedName2)
-
   if (modSelectedName2.length > 1) {
     const modSelectedName3 = modSelectedName2.splice(1, 0, '-')
   }
