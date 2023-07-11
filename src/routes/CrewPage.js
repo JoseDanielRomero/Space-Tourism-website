@@ -32,7 +32,7 @@ function CrewPage() {
   }
 
   const handleClassTitleByDevice = (display) => {
-    if (windowWidthFix < 680) {
+    if (windowWidthFix < 480) {
       if (display == false) {
         return 'title-destination-box off'
       } else {

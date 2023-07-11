@@ -20,7 +20,7 @@ function TechPage() {
     const modSelectedName3 = modSelectedName2.splice(1, 0, '-')
   }
 
-  const orientation = windowWidthFix < 680 ? 'landscape' : 'portrait'
+  const orientation = windowWidthFix < 480 ? 'landscape' : 'portrait'
 
   const modSelectedName4 = modSelectedName2.join('')
   const urlFormated = require(`../images/technology/image-${modSelectedName4}-${orientation}.jpg`)
@@ -39,7 +39,7 @@ function TechPage() {
   }
 
   const handleClassTitleByDevice = (display) => {
-    if (windowWidthFix < 680) {
+    if (windowWidthFix < 480) {
       if (display == false) {
         return 'title-destination-box off'
       } else {
