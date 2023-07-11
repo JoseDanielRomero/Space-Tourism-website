@@ -24,3 +24,32 @@
     color: white;
     font-weight: 400;
 }
+
+@media screen and (max-width: 480px) {
+
+    .title-destination-box {
+        height: 10%;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4%;
+        margin-bottom: 10%;
+    }
+    
+    .title-destination-number, .title-destination-text {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 4.72px;
+        margin: 0;
+    }
+    
+    .title-destination-number {
+        color: rgb(117, 117, 117);
+        font-weight: 700;
+    }
+    
+    .title-destination-text {
+        color: white;
+        font-weight: 400;
+    }
+
+}

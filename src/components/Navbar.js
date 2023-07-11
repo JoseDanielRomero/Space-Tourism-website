@@ -11,9 +11,6 @@ function Navbar () {
 
   const [navbarToogle, setNavbarToogle] = useState(false);
 
-  console.log(windowWidthFix)
-  console.log(navbarToogle)
-
   const handleClickShowNavbar = () => {
     if (windowWidthFix < 680) {
       if (navbarToogle === false) {

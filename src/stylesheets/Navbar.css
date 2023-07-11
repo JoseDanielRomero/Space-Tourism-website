@@ -84,6 +84,10 @@ li {
 
 @media screen and (max-width: 480px) {
 
+    nav {
+        height: 15vh;
+    }
+
     .logo {
         height: 43px;
         width: 43px;

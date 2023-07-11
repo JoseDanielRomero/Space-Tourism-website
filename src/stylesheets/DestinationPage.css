@@ -78,3 +78,61 @@
     border-bottom: 3px solid rgb(211, 211, 211);
     cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+
+    .DestinationPage {
+        height: auto;
+        background-image: url('../images/background-destination-desktop.jpg');
+        padding-bottom: 20%;
+    }
+
+    .main-destination {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0 10%;
+    }
+    
+    .left-side {
+        height: 30%;
+        width: 100%;
+    }
+
+    .right-side {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-container {
+        height: 72%;
+        width: 100%;
+        margin-top: 3%;
+        margin-left: 0;
+    }
+
+    .destination-picker-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .destination-picker-list {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .destination-picker-item:hover {
+        padding-top: 0;
+        border: none;
+        cursor: pointer;
+    }
+}

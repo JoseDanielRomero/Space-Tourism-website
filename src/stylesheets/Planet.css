@@ -11,3 +11,12 @@
     height: 75%;
     margin-bottom: 7%;
 }
+
+@media screen and (max-width: 480px) {
+
+    .destination-image {
+        width: 70%;
+        margin-bottom: 10%;
+    }
+
+}
