@@ -9,7 +9,7 @@ function Navbar ({ navbarToogle, setNavbarToogle }) {
   const windowWidthFix = windowWidth.current
 
   const handleClickShowNavbar = () => {
-    if (windowWidthFix < 680) {
+    if (windowWidthFix < 480) {
       if (navbarToogle === false) {
         setNavbarToogle(true)
       } else {
@@ -19,14 +19,23 @@ function Navbar ({ navbarToogle, setNavbarToogle }) {
   }
 
   const handleShowHamburgerIcon = () => {
-    if (windowWidthFix > 680) {
+    if (windowWidthFix > 480) {
       return 'hamburger-icon off'
     } else {
       return 'hamburger-icon'
     }
   }
+
+  window.onscroll = function() {
+    var y = window.scrollY;
+    if (windowWidthFix < 480) {
+      if (y > 50) {
+        setNavbarToogle(false)
+      }
+    } 
+  };
   
-  const handleClassShowNavbar = navbarToogle == false ? 'navbar-container off' : 'navbar-container scroll'
+  const handleClassShowNavbar = navbarToogle == false ? 'navbar-container off' : 'navbar-container'
   const handleClassShowIcon = navbarToogle == false ? hamburgerIcon : closeIcon
   const handleClassNavbarItems = navbarToogle == false ? 'nav-item off' : 'nav-item'
 
