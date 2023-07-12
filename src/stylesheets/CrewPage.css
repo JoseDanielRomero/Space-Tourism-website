@@ -73,7 +73,7 @@
 .crew-picker-button {
     height: 17px;
     width: 17px;
-    border-radius: 20px;
+    border-radius: 17px;
     border: none;
     background-color: gray;
 }
@@ -120,10 +120,10 @@
         justify-content: flex-start;
         padding: 0 10%;
     }
-    
+
     .left-side.crew {
         order: 5;
-        height: 0%;
+        height: 50%;
         width: 100%;
         margin-left: 0;
         display: flex;
@@ -172,8 +172,7 @@
 
     .crew-picker-box {
         height: 12%;
-        width: 60%;
-        /* margin-top: 10%; */
+        width: 80%;
         order: 1;
     }
 

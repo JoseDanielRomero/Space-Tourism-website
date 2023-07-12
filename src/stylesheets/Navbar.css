@@ -24,6 +24,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.041);
+    -webkit-backdrop-filter: blur(55px);
     backdrop-filter: blur(55px);
 }
 
@@ -113,6 +114,9 @@ li {
         right: 0; 
         z-index: 900000;
         transition: width .20s ease-in-out;
+        background-color: rgba(41, 44, 50, 0.966);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
     }
 
     .navbar-list {

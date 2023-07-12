@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './routes/HomePage';
 import DestinationPage from './routes/DestinationPage';
 import CrewPage from './routes/CrewPage'
@@ -118,14 +118,14 @@ export const DatabaseContext = createContext({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/destination' element={<DestinationPage />} />
-          <Route path='/crew' element={<CrewPage />} />
-          <Route path='/technology' element={<TechPage />} />
-        </Routes>
-    </React.StrictMode>
-  </BrowserRouter>
+  <React.StrictMode>
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/destination' element={<DestinationPage />} />
+        <Route path='/crew' element={<CrewPage />} />
+        <Route path='/technology' element={<TechPage />} />
+      </Routes>
+    </HashRouter>
+  </React.StrictMode>
 );

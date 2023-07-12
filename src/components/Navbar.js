@@ -26,7 +26,7 @@ function Navbar ({ navbarToogle, setNavbarToogle }) {
     }
   }
   
-  const handleClassShowNavbar = navbarToogle == false ? 'navbar-container off' : 'navbar-container'
+  const handleClassShowNavbar = navbarToogle == false ? 'navbar-container off' : 'navbar-container scroll'
   const handleClassShowIcon = navbarToogle == false ? hamburgerIcon : closeIcon
   const handleClassNavbarItems = navbarToogle == false ? 'nav-item off' : 'nav-item'
 
